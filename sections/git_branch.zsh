@@ -27,5 +27,8 @@ spaceship_git_branch() {
 
   spaceship::section \
     "$SPACESHIP_GIT_BRANCH_COLOR" \
-    "$SPACESHIP_GIT_BRANCH_PREFIX${git_current_branch}$SPACESHIP_GIT_BRANCH_SUFFIX"
+    "$SPACESHIP_GIT_BRANCH_PREFIX" \
+    "%{$fg[magenta]%}${git_current_branch}" \
+    "@%{$fg[yellow]%}$(git_prompt_short_sha)" \
+    "$SPACESHIP_GIT_BRANCH_SUFFIX"
 }
